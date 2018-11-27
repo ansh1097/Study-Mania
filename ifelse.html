@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("C++n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="#home">Home</a>
+  <a href="#Variable">Variable</a>
+  <a href="#Datatypes">Datatypes</a>
+  <a href="operator.html">Operators</a>
+  <a class="active" href="ifelse.html">If-else</a>
+  <a href="forloop.html">For-loop</a>
+  <a href="#While loop">While loop</a>
+  <a href="#Do-While loop">Do-While loop</a>
+  <a href="#Break statement">Break statement</a>
+  <!--<a href="#Continue statement">Continue statement</a>-->
+  <a href="#Goto statement">Goto statement</a>
+  <a href="#Comments">Comments</a>
+  <a href="#Functions">Functions</a>
+  <a href="#Call by Value & Reference">Call by Value & Reference</a>
+  <a href="#Recursion">Recursion</a>
+  <a href="#Storage Classes">Storage Classes</a>
+  <a href="#Arrays">Arrays</a>
+  <a href="#Pointers">Pointers</a>
+  <a href="#OOPs Concepts">OOPs Concepts</a>
+  <a href="#Constructor">Constructor</a>
+  <a href="#Destructor">Destructor</a>
+  <a href="#Polymorphism">Polymorphism</a>
+  <a href="#MCQ's">MCQ's</a>
+  <a href="#Quiz">Quiz</a>
+  <a href="#Videos">Videos</a>
+</div>
+
+
+<div class="content">
+ <h1>IF-ELSE</h1>
+ <h2>Looping in C++</h2>
+<p><font size="4">In any programming language, loops are used to execute a set of statements repeatedly until a particular condition is satisfied.
+</font></p>
+<p><font size="4">A sequence of statement is executed until a specified condition is true. This sequence of statement to be executed is kept inside the curly braces { } known as loop body. After every execution of loop body, condition is checked, and if it is found to be true the loop body is executed again. When condition check comes out to be false, the loop body will not be executed.</font></p>
+
+<h2> C++ If-Else </h2>
+<p><font size="4">In C++ programming, if statement is used to test the condition. There are various types of if statements in C++.</font></p>
+<p><font size="4">1. If Statement </font></p>
+<p><font size="4">2. If-else Statement</font></p>
+<p><font size="4">3. Nested if Statement</font></p>
+<p><font size="4">4. if-else-if ladder </font></p>
+
+<h2> IF STATEMENT </h2>
+<p><font size="4">The C++ if statement tests the condition. It is executed if condition is true.</font></p>
+
+<p><font size="4">Syntax:<font></p>
+<p><font size="4">if(condition){ </font></p>
+<p><font size="4">//code to be executed</font></p>
+<p><font size="4">}</font></p>
+
+<h2>If Statement Example</h2>
+<p><font size="4">#include <iostream> 
+<p><font size="4">using namespace std;
+<p><font size="4">int main () {  
+<p><font size="4"> int num = 10; 
+<p><font size="4"> if (num % 2 == 0)  
+<p><font size="4">{
+<p><font size="4">cout<<"It is even number"; 
+<p><font size="4">}
+<p><font size="4"> return 0; 
+<p><font size="4">}
+
+<h2> IF-else STATEMENT </h2>
+
+<p><font size="4">The C++ if-else statement also tests the condition. It executes if block if condition is true otherwise else block is executed.
+</font></p>
+<p><font size="4">Syntax:<font></p>
+<p><font size="4">if(condition){ </font></p>
+<p><font size="4">//code if condition is true</font></p>
+<p><font size="4">}else{</font></p>
+<p><font size="4">//code if condition is false</font></p>
+<p><font size="4">}</font></p>
+
+<h2>If-else Statement Example</h2>
+<p><font size="4">#include <iostream> </font></p>
+<p><font size="4">using namespace std;</font></p>
+<p><font size="4">int main () {  </font></p>
+<p><font size="4"> int num = 11; </font></p>
+<p><font size="4"> if (num % 2 == 0)  </font></p>
+<p><font size="4">{</font></p>
+<p><font size="4">cout<<"It is even number"; </font></p> 
+<p><font size="4">} </font></p>
+<p><font size="4">else </font></p>
+<p><font size="4">{ </font></p>
+<p><font size="4">cout<<"It is odd number"; </font></p> 
+<p><font size="4">} </font></p>
+<p><font size="4"> return 0; </font></p>
+<p><font size="4">}</font></p>
+
+<h2>C++ If-else Example: with input from user</h2>
+<p><font size="4">#include <iostream></font></p>
+<p><font size="4">using namespace std; </font></p> 
+<p><font size="4">int main () {  </font></p>
+<p><font size="4">int num;  </font></p>
+<p><font size="4">cout<<"Enter a Number: "; </font></p> 
+<p><font size="4">cin>>num;  </font></p>
+<p><font size="4">if (num % 2 == 0)    </font></p>
+<p><font size="4">{    </font></p>
+<p><font size="4">cout<<"It is even number"<< </font></p>   
+<p><font size="4">}   </font></p>
+<p><font size="4">else{</font></p>
+<p><font size="4">{    </font></p>
+<p><font size="4">cout<<"It is odd number"<< </font></p>    
+<p><font size="4">}  </font></p>
+<p><font size="4">return 0;  </font></p>
+<p><font size="4">}  </font></p>
+
+<h2> IF-else-if ladder Statement </h2>
+<p><font size="4">The C++ if-else-if ladder statement executes one condition from multiple statements.</font></p>
+<p><font size="4">if(condition1){   </font></p>
+<p><font size="4">//code to be executed if condition1 is true 
+<p><font size="4">}else if(condition2){  
+<p><font size="4">//code to be executed if condition2 is true 
+<p><font size="4">}
+<p><font size="4">else if(condition3){  
+<p><font size="4">//code to be executed if condition3 is true  
+<p><font size="4">}
+<p><font size="4">...
+<p><font size="4">else{
+<p><font size="4">//code to be executed if all the conditions are false
+<p><font size="4">}
+
+<h2>C++ If-else-if Example</h2>
+<p><font size="4">#include <iostream></font></p>
+<p><font size="4">using namespace std; </font></p> 
+<p><font size="4">int main () {  </font></p>
+<p><font size="4">int num;  </font></p>
+<p><font size="4">cout<<"Enter a number to check grade:";  </font></p> 
+<p><font size="4">cin>>num;  </font></p>
+<p><font size="4"> if (num <0 || num >100)    </font></p>
+<p><font size="4">{    </font></p>
+<p><font size="4">cout<<"wrong number";  </font></p>   
+<p><font size="4">}   </font></p>
+<p><font size="4">else if(num >= 0 && num < 50){</font></p>
+<p><font size="4">cout<<"Fail";    </font></p>
+<p><font size="4">}</font></p>
+<p><font size="4"> else if (num >= 50 && num < 60)  </font></p>    
+<p><font size="4">{ </font></p>
+<p><font size="4"> cout<<"D Grade";    </font></p>
+<p><font size="4">} </font></p>
+<p><font size="4">else if (num >= 60 && num < 70)</font></p> 
+<p><font size="4">{</font></p>
+<p><font size="4"> cout<<"C Grade";</font></p> 
+<p><font size="4">}</font></p>
+<p><font size="4">else if (num >= 70 && num < 80) </font></p>
+<p><font size="4">{ </font></p>
+<p><font size="4">else if (num >= 70 && num < 80)</font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">else if (num >= 80 && num < 90) </font></p>
+<p><font size="4">{ </font></p>
+<p><font size="4">cout<<"A Grade"; </font></p>  
+<p><font size="4">} </font></p>
+<p><font size="4"> else if (num >= 90 && num <= 100) </font></p>
+<p><font size="4">{  </font></p>
+<p><font size="4">cout<<"A+ Grade"; </font></p>
+<p><font size="4">} </font></p>
+<p><font size="4">} </font></p>
+</div>
+
+</body>
+</html>

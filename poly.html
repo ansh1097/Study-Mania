@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("C++n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="C++.html">Home</a>
+  <a href="var.html">Variable</a>
+  <a href="data.html">Datatypes</a>
+  <a href="operator.html">Operators</a>
+  <a href="ifelse.html">If-else</a>
+  <a href="forloop.html">For-loop</a>
+  <a href="whileloop.html">While loop</a>
+  <a href="doWhileloop.html">Do-While loop</a>
+  <a href="break.html">Break statement</a>
+  <!--<a href="#Continue statement">Continue statement</a>-->
+  <a href="goto.html">Goto statement</a>
+  <a href="comments.html">Comments</a>
+  <a href="function.html">Functions</a>
+  <a href="call.html">Call by Value & Reference</a>
+  <a href="recursion.html">Recursion</a>
+  <a href="storage.html">Storage Classes</a>
+  <a href="arrays.html">Arrays</a>
+  <a href="pointers.html">Pointers</a>
+  <a href="oop.html">OOPs Concepts</a>
+  <a href="constructor.html">Constructor</a>
+  <a href="destructor.html">Destructor</a>
+  <a class="active" href="poly.html">Polymorphism</a>
+  <a href="#MCQ's">MCQ's</a>
+  <a href="#Quiz">Quiz</a>
+  <a href="#Videos">Videos</a>
+</div>
+
+
+<div class="content">
+ <h1>C++ POLYMORPHISM </h1>
+<p><font size="4">The term "Polymorphism" is the combination of "poly" + "morphs" which means many forms. It is a greek word. In object-oriented programming, we use 3 main concepts: inheritance, encapsulation and polymorphism.</font></p>
+<p><font size="4">There are two types of polymorphism in C++:</font></p>
+<p><font size="4"><b>1. Compile Time Polymorphism:</b>It is achieved by function overloading and operator overloading which is also known as static binding or early binding.</font></p>
+<p><font size="4"><b>2. Run Time Polymorphism:</b>It is achieved by method overriding which is also known as dynamic binding or late binding.</font></p>
+
+<h2>C++ Runtime Polymorphism Example</h2>
+<p><font size="4">Let's see a simple example of runtime polymorphism in C++.</font></p>
+<p><font size="4">#include<iostream></font></p>
+<p><font size="4">using namespace std; </font></p>
+<p><font size="4">class Animal{</font></p>
+<p><font size="4">public:</font></p>
+<p><font size="4">void eat(){</font></p> 
+<p><font size="4">cout<<"eating...";</font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">}; </font></p>
+<p><font size="4">class Dog:public Animal</font></p>
+<p><font size="4">{</font></p>
+<p><font size="4">public:</font></p>
+<p><font size="4">void eat(){</font></p>
+<p><font size="4">cout<<"eating bread...";</font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">};</font></p>
+<p><font size="4">int main(void){</font></p>
+<p><font size="4">Dog d=Dog();</font></p>
+<p><font size="4">d.eat();</font></p>
+<p><font size="4">return 0;</font></p>
+<p><font size="4">}</font></p>
+
+
+<h2>C++ Runtime Polymorphism Example: By using two derived class</h2>
+<p><font size="4">Let's see another example of runtime polymorphism in C++ where we are having two derived classes.</font></p>
+<p><font size="4">#include <iostream></iostream></font></p>
+<p><font size="4">using namespace std;</font></p>
+<p><font size="4">class Shape {</font></p>
+<p><font size="4">public:</font></p>
+<p><font size="4">virtual void draw(){</font></p>    
+<p><font size="4">cout<<"drawing..."<<endl;</font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">};</font></p>  
+<p><font size="4">class Rectangle:public Shape </font></p>
+<p><font size="4">{ </font></p>
+<p><font size="4">public:</font></p>
+<p><font size="4">void draw()</font></p>
+<p><font size="4">{ </font></p>
+<p><font size="4">cout<<"drawing rectangle..."<<endl;</font></p>  
+<p><font size="4">}</font></p>
+<p><font size="4">};</font></p>  
+<p><font size="4">class /circle:public Shape  </font></p>
+<p><font size="4">{</font></p>
+<p><font size="4">public:</font></p>
+<p><font size="4">void draw(){</font></p> 
+<p><font size="4">cout<<"drawing circle..."<<endl; </font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">};</font></p>
+<p><font size="4">int main(void){</font></p>
+<p><font size="4">Shape *s;</font></p>
+<p><font size="4">Shape sh;</font></p>
+<p><font size="4">Rectangle rec;</font></p>
+<p><font size="4">Circle cir;</font></p>
+<p><font size="4">s=&sh;</font></p>
+<p><font size="4">s->draw();</font></p>
+<p><font size="4">s=&rec;</font></p>
+<p><font size="4">s->draw();</font></p>
+<p><font size="4">s=0;</font></p>
+<p><font size="4">s->draw();</font></p>
+<p><font size="4">}</font></p>
+</div>
+</body>
+</html>

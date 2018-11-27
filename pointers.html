@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("C++n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="C++.html">Home</a>
+  <a href="var.html">Variable</a>
+  <a href="data.html">Datatypes</a>
+  <a href="operator.html">Operators</a>
+  <a href="ifelse.html">If-else</a>
+  <a href="forloop.html">For-loop</a>
+  <a href="whileloop.html">While loop</a>
+  <a href="doWhileloop.html">Do-While loop</a>
+  <a href="break.html">Break statement</a>
+  <!--<a href="#Continue statement">Continue statement</a>-->
+  <a href="goto.html">Goto statement</a>
+  <a href="comments.html">Comments</a>
+  <a href="function.html">Functions</a>
+  <a href="call.html">Call by Value & Reference</a>
+  <a href="recursion.html">Recursion</a>
+  <a href="storage.html">Storage Classes</a>
+  <a href="arrays.html">Arrays</a>
+  <a class="active" href="pointers.html">Pointers</a>
+  <a href="oop.html">OOPs Concepts</a>
+  <a href="#Constructor">Constructor</a>
+  <a href="#Destructor">Destructor</a>
+  <a href="#Polymorphism">Polymorphism</a>
+  <a href="#MCQ's">MCQ's</a>
+  <a href="#Quiz">Quiz</a>
+  <a href="#Videos">Videos</a>
+</div>
+
+
+<div class="content">
+ <h1>C++ POINTERS </h1>
+<p><font size="4">A pointer is a variable whose value is the address of another variable. Like any variable or constant, you must declare a pointer before you can work with it. The pointer in C++ language is a variable, it is also known as locator or indicator that points to an address of a value.</font></p>
+<p><font size="4">The general form of a pointer variable declaration is −</font></p>
+<p><font size="4">type *var-name;</font></p>
+<p><font size="4">Here, type is the pointer's base type; it must be a valid C++ type and var-name is the name of the pointer variable. The asterisk you used to declare a pointer is the same asterisk that you use for multiplication. However, in this statement the asterisk is being used to designate a variable as a pointer. </font></p>
+
+<h2>Advantages of Pointers</h2>
+<p><font size="4">1. Pointer reduces the code and improves the performance, it is used to retrieving strings, trees etc. and used with arrays, structures and functions.</font></p>
+<p><font size="4">2. We can return multiple values from function using pointer.</font></p>
+<p><font size="4">3. It makes you able to access any memory location in the computer's memory.</font></p>
+
+<h2>Usage of Pointer</h2>
+<p><font size="4">There are many usage of pointers in C++ language-</font></p>
+<p><font size="4"><b>1. Dynamic memory allocation</b></font></p>
+<p><font size="4">In c language, we can dynamically allocate memory using malloc() and calloc() functions where pointer is used.</font></p>
+<p><font size="4"><b>2. Arrays,Functions and Structures</b></font></p>
+<p><font size="4">Pointers in c language are widely used in arrays, functions and structures. It reduces the code and improves the performance.</font></p>
+
+<table>
+  <tr>
+    <th>Symbol</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>&(ampersand sign)</td>
+    <td>Address operator</td>
+    <td>Determines the address of the variable</td>
+  </tr>
+  <tr>
+    <td>*(asterisk sign)</td>
+    <td>Indirection operator</td>
+    <td>Access the value of an address</td>
+  </tr>
+</table>
+
+<h2> Declaring a pointer </h2>
+<p><font size="4">The pointer in C++ language can be declared using ∗ (asterisk symbol).</font></p>
+<p><font size="4">int *a;//pointer to int</font></p>
+<p><font size="4">char *c;//pointer to char</font></p>
+
+<h2> Pointer Example </h2>
+<p><font size="4">Let's see the simple example of using pointers printing the address and value.</font></p>
+<p><font size="4">#include<iostream></font></p>
+<p><font size="4">using namespace std; </font></p>
+<p><font size="4">int main()</font></p>
+<p><font size="4">{</font></p>
+<p><font size="4">int number=30;</font></p> 
+<p><font size="4">int *p;</font></p>
+<p><font size="4">p=&number;//stores the address of number variable</font></p>
+<p><font size="4">cout<<"Address of number variable is:"<<&number<<endl; </font></p>
+<p><font size="4">cout<<"Address of p variable is:"<<p<<endl;   </font></p>
+<p><font size="4">cout<<"Value of p variable is:"<<*p<<endl;  </font></p>
+<p><font size="4">return 0;</font></p>
+<p><font size="4">}</font></p>
+
+<h2> Pointer program to swap 2 numbers without using 3rd variable </h2>
+<p><font size="4">#include<iostream></font></p>
+<p><font size="4">using namespace std; </font></p>
+<p><font size="4">int main()</font></p>
+<p><font size="4">{</font></p>
+<p><font size="4">int a=20,b=10,∗p1=&a,∗p2=&b; </font></p> 
+<p><font size="4">cout<<"Before swap: ∗p1="<<∗p1<<" ∗p2="<<∗p2<<endl;</font></p>
+<p><font size="4">∗p1=∗p1+∗p2;</font></p>
+<p><font size="4">∗p2=∗p1-∗p2;</font></p>
+<p><font size="4">∗p1=∗p1-∗p2; </font></p>
+<p><font size="4">cout<<"After swap: ∗p1="<<∗p1<<" ∗p2="<<∗p2<<endl; </font></p>
+<p><font size="4">return 0;</font></p>
+<p><font size="4">}</font></p>
+
+<h2>Pointers in C++</h2>
+<p><font size="4">Pointers have many but easy concepts and they are very important to C++ programming. There are following few important pointer concepts which should be clear to a C++ programmer −</font></p>
+  <table>
+  <tr>
+    <th>Sr.No.</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td><b>Null Pointers:</b>C++ supports null pointer, which is a constant with a value of zero defined in several standard libraries.</td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td><b>Pointer Arithmetic:</b>There are four arithmetic operators that can be used on pointers: ++, --, +, -</td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td><b>Pointers vs Arrays:</b>There is a close relationship between pointers and arrays.</td>
+  </tr>
+  <tr>
+   <td>4.</td>
+    <td><b>Array of Pointers:</b>You can define arrays to hold a number of pointers.</td>
+  </tr>
+   <tr>
+    <td>5.</td>
+    <td><b>Pointer to Pointer:</b>C++ allows you to have pointer on a pointer and so on.</td>
+  </tr>
+</table>
+</div>
+</body>
+</html>

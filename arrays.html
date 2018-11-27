@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("C++n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="C++.html">Home</a>
+  <a href="var.html">Variable</a>
+  <a href="data.html">Datatypes</a>
+  <a href="operator.html">Operators</a>
+  <a href="ifelse.html">If-else</a>
+  <a href="forloop.html">For-loop</a>
+  <a href="whileloop.html">While loop</a>
+  <a href="doWhileloop.html">Do-While loop</a>
+  <a href="break.html">Break statement</a>
+  <!--<a href="#Continue statement">Continue statement</a>-->
+  <a href="goto.html">Goto statement</a>
+  <a href="comments.html">Comments</a>
+  <a href="function.html">Functions</a>
+  <a href="call.html">Call by Value & Reference</a>
+  <a href="recursion.html">Recursion</a>
+  <a href="storage.html">Storage Classes</a>
+  <a class="active" href="arrays.html">Arrays</a>
+  <a href="pointers.html">Pointers</a>
+  <a href="#OOPs Concepts">OOPs Concepts</a>
+  <a href="#Constructor">Constructor</a>
+  <a href="#Destructor">Destructor</a>
+  <a href="#Polymorphism">Polymorphism</a>
+  <a href="#MCQ's">MCQ's</a>
+  <a href="#Quiz">Quiz</a>
+  <a href="#Videos">Videos</a>
+</div>
+
+
+<div class="content">
+ <h1>C++ ARRAYS </h1>
+<p><font size="4">Like other programming languages, array in C++ is a group of similar types of elements that have contiguous memory location.</font></p>
+<p><font size="4">In C++ <b>std::array</b> is a container that encapsulates fixed size arrays. In C++, array index starts from 0. We can store only fixed set of elements in C++ array.</font></p>
+<p><font size="4">Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index.</font></p>
+
+<h2>Advantages of C++ Array</h2>
+<p><font size="4">1. Code Optimization(less code)</font></p>
+<p><font size="4">2. Random Access</font></p>
+<p><font size="4">3. Easy to traverse data</font></p>
+<p><font size="4">4. Easy to manipulate data</font></p>
+<p><font size="4">5. Easy to sort data</font></p>
+
+<h2>Disadvantages of C++ Array</h2>
+<p><font size="4">1. Fixed Size</font></p>
+
+<h2> Declaring Arrays </h2>
+<p><font size="4">To declare an array in C++, the programmer specifies the type of the elements and the number of elements required by an array as follows −</font></p>
+<p><font size="4">type arrayName [ arraySize ];</font></p>
+<p><font size="4">This is called a single-dimension array. The arraySize must be an integer constant greater than zero and type can be any valid C++ data type. For example, to declare a 10-element array called balance of type double, use this statement −</font></p>
+<p><font size="4">double balance[10];</font></p>
+
+<h2> Initializing Arrays </h2>
+<p><font size="4">You can initialize C++ array elements either one by one or using a single statement as follows −</font></p>
+<p><font size="4">double balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};</font></p>
+<p><font size="4">The number of values between braces { } can not be larger than the number of elements that we declare for the array between square brackets [ ]. Following is an example to assign a single element of the array −</font></p> 
+<p><font size="4">If you omit the size of the array, an array just big enough to hold the initialization is created. Therefore, if you write −</font></p>
+<p><font size="4">double balance[] = {1000.0, 2.0, 3.4, 17.0, 50.0};</font></p>
+
+<h2> Accessing Array Elements </h2>
+<p><font size="4">An element is accessed by indexing the array name. This is done by placing the index of the element within square brackets after the name of the array. For example −</font></p>
+<p><font size="4">double salary = balance[9];</font></p>
+<p><font size="4">Following is an example, which will use all the above-mentioned three concepts viz. declaration, assignment and accessing arrays −</font></p>
+<p><font size="4">#include<iostream></font></p>
+<p><font size="4">using namespace std; </font></p>
+<p><font size="4">#include<iomainip></font></p>
+<p><font size="4">using std::setw;</font></p>
+<p><font size="4">int main(){</font></p> 
+<p><font size="4">int n[10];//n is an array of 10 integers</font></p>
+<p><font size="4">// initializing elements of array n to 0</font></p>
+<p><font size="4">for ( int i = 0; i < 10; i++ ) {</font></p>
+<p><font size="4">n[ i ] = i + 100; // set element at location i to i + 100</font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">cout << "Element" << setw( 13 ) << "Value" << endl;</font></p>
+<p><font size="4">// output each array element's value </font></p>
+<p><font size="4">for ( int j = 0; j < 10; j++ ) {</font></p>
+<p><font size="4">cout << setw( 7 )<< j << setw( 13 ) << n[ j ] << endl;</font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">return 0;</font></p>
+<p><font size="4">}</font></p>
+
+<h2>C++ Array Types</h2>
+<p><font size="4">There are two types of arrays in C++ programming:</font></p>
+<p><font size="4">1. Single Dimensional Array</font></p>
+<p><font size="4">2. Multidimensional Array</font></p>
+
+<h2> C++ Single Dimensional Array </h2>
+<p><font size="4">Let's see a simple example of C++ array, where we are going to create, initialize and traverse array.</font></p>
+<p><font size="4">#include<iostream></font></p>
+<p><font size="4">using namespace std; </font></p>
+<p><font size="4">int main()</font></p> 
+<p><font size="4">{</font></p>
+<p><font size="4"> int arr[5]={10, 0, 20, 0, 30};  //creating and initializing array</font></p>
+<p><font size="4">//traversing array</font></p>
+<p><font size="4">   for (int i = 0; i < 5; i++) </font></p>
+<p><font size="4">{</font></p>
+<p><font size="4">cout<<arr[i]<<"\n";</font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">}</font></p>
+
+<h2> C++ Multi Dimensional Array </h2>
+<p><font size="4">The multidimensional array is also known as rectangular arrays in C++. It can be two dimensional or three dimensional. The data is stored in tabular form (row ∗ column) which is also known as matrix.</font></p>
+<p><font size="4">Let's see a simple example of multidimensional array in C++ which declares, initializes and traverse two dimensional arrays.</font></p>
+<p><font size="4">#include<iostream></font></p>
+<p><font size="4">using namespace std; </font></p>
+<p><font size="4">int main()</font></p> 
+<p><font size="4">{</font></p>
+<p><font size="4"> int test[3][3];//declaration of 2D array</font></p>
+<p><font size="4">test[0][0]=5;</font></p>
+<p><font size="4">test[0][1]=10;</font></p>
+<p><font size="4">test[1][1]=15;</font></p>
+<p><font size="4">test[1][2]=20;</font></p>
+<p><font size="4">test[2][0]=30;</font></p>
+<p><font size="4">test[2][2]=10;</font></p>
+<p><font size="4">//traversal</font></p>
+<p><font size="4">for(int i = 0; i < 3; ++i) </font></p>
+<p><font size="4">{</p>
+<p><font size="4">for(int j = 0; j < 3; ++j) </font></p>
+<p><font size="4">{</font></p>
+<p><font size="4">cout<< test[i][j]<<" "; </font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">cout<<"\n"; //new line at each row</font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">return 0;</font></p>
+<p><font size="4">}</font></p>
+</div>
+</body>
+</html>

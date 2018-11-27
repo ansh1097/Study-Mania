@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("C++n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="C++.html">Home</a>
+  <a class="active" href="#Variable">Variable</a>
+  <a href="data.html">Datatypes</a>
+  <a href="#Operators">Operators</a>
+  <a href="#If-else">If-else</a>
+  <a href="#For-loop">For-loop</a>
+  <a href="#While loop">While loop</a>
+  <a href="#Do-While loop">Do-While loop</a>
+  <a href="#Break statement">Break statement</a>
+  <!--<a href="#Continue statement">Continue statement</a>-->
+  <a href="#Goto statement">Goto statement</a>
+  <a href="#Comments">Comments</a>
+  <a href="#Functions">Functions</a>
+  <a href="#Call by Value & Reference">Call by Value & Reference</a>
+  <a href="#Recursion">Recursion</a>
+  <a href="#Storage Classes">Storage Classes</a>
+  <a href="#Arrays">Arrays</a>
+  <a href="#Pointers">Pointers</a>
+  <a href="#OOPs Concepts">OOPs Concepts</a>
+  <a href="#Constructor">Constructor</a>
+  <a href="#Destructor">Destructor</a>
+  <a href="#Polymorphism">Polymorphism</a>
+  <a href="#MCQ's">MCQ's</a>
+  <a href="#Quiz">Quiz</a>
+  <a href="#Videos">Videos</a>
+</div>
+
+
+<div class="content">
+ <h1>VARIABLES</h1>
+<p><font size="4">Variable are used in C++, where we need storage for any value, which will change in program. Variable can be declared in multiple ways each with different memory requirements and functioning. Variable is the name of memory location allocated by the compiler depending upon the datatype of the variable. In C++ variable is used to store data in a memory location, which can be modified or used in the program during program execution.</font></p>
+<p><font size="4">A variable provides us with named storage that our programs can manipulate. Each variable in C++ has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.</font></p>
+<p><font size="4">The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C++ is case-sensitive.</font></p>
+
+<h3>Syntax:</h3>
+<p><font size="4"> data_type variable_name; </font></p>
+
+<h3><font size="4">Example:</font></h3>
+<p><font size="4"> /*variable defination*/ int width, height, age;</font></p>
+<p><font size="4"> char letter;</font></p>
+<p><font size="4"> float area; </font></p>
+<p><font size="4"> double d; </font></p>
+
+<h3> Basic types of Variables </h3>
+<p> Each variable while declaration must be given a datatype, on which the memory assigned to the variable depends. Following are the basic types of variables, </p>
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>bool</td>
+    <td>For variable to store boolean values( True or False )</td>
+  </tr>
+  <tr>
+    <td>char</td>
+    <td>For variables to store character types.</td>
+  </tr>
+  <tr>
+    <td>int</td>
+    <td>for variable with integral values</td>
+  </tr>
+  <tr>
+    <td>float and double</td>
+    <td>are also types for variables with large and floating point values</td>
+  </tr>
+</table>
+
+<h3> Declaration and Initialization </h3>
+<p><font size="4">Variable must be declared before they are used. Usually it is preferred to declare them at the starting of the program, but in C++ they can be declared in the middle of program too, but must be done before using them.</font></p>
+<p><font size="4">Example: </font></p>
+<p><font size="3"> int i;</font></p>
+<p><font size="3"> char c; </font></p>
+<p><font size="3"> int i,j,k; </font></p>
+
+<h3> Scope of Variables </h3>
+
+<p><font size="4"> All the variables have their area of functioning, and out of that boundary they don't hold their value, this boundary is called scope of the variable. For most of the cases its between the curly braces,in which variable is declared that a variable exists, not outside it. We will study the storage classes later, but as of now, we can broadly divide variables into two main types:- Global Variables and Local Variables.
+</font></p>
+
+<h3> Global Variables </h3>
+
+<p><font size="4">Global variables are those, which ar once declared and can be used throughout the lifetime of the program by any class or any function. They must be declared outside the main() function. If only declared, they can be assigned different values at different time in program lifetime. But even if they are declared and initialized at the same time outside the main() function, then also they can be assigned any value at any point in the program.</font></p>
+
+<p><font size-"4"><b>Example :</b> Only declared, not initialized</font></p>
+<p><font size="3">
+#include<iostream></font></p>
+<p><font size="3">using namespace std;</font></p>
+<p><font size="3">int x; // Global variable declared</font></p>
+<p><font size="3">int main()</font></p>
+{
+ <p><font size="3">x=10; // Initialized once</font></p>
+ <p><font size="3">cout <<"first value of x = "<< x;</font></p>
+ <p><font size="3">x=20; // Initialized again</font></p>
+ <p><font size="3">cout <<"Initialized again with value = "<< x;</font></p>
+}
+</font></p>
+
+<h3> Local Variables </h3>
+
+<p><font size="4">Local variables are the variables which exist only between the curly braces, in which its declared. Outside that they are unavailable and leads to compile time error.</font></p>
+<p><font size="4"><b>Example :</b></font></p>
+
+<p><font size="3">#include<iostream></font></p>
+<p><font size="3">using namespace std;</font></p>
+<p><font size="3">int main()</font></p>
+{
+<p><font size="3"> int i=10;</font></p>
+ if(i<20)
+  {
+  <p><font size="3">  int n=100;   // Local variable declared and initialized </font></p>
+  }              // if condition scope ends
+ <p><font size="3">cout << n;      // Compile time error, n not available here</font></p>
+}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("C++n.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a class="active" href="#home">Home</a>
+  <a href="var.html">Variable</a>
+  <a href="data.html">Datatypes</a>
+  <a href="operator.html">Operators</a>
+  <a href="ifelse.html">If-else</a>
+  <a href="forloop.html">For-loop</a>
+  <a href="whileloop.html">While loop</a>
+  <a href="dowhileloop.html">Do-While loop</a>
+  <a href="break.html">Break statement</a>
+  <!--<a href="#Continue statement">Continue statement</a>-->
+  <a href="goto.html">Goto statement</a>
+  <a href="comments.html">Comments</a>
+  <a href="function.html">Functions</a>
+  <a href="call.html">Call by Value & Reference</a>
+  <a href="recursion.html">Recursion</a>
+  <a href="storage.html">Storage Classes</a>
+  <a href="arrays.html">Arrays</a>
+  <a href="pointers.html">Pointers</a>
+  <a href="#OOPs Concepts">OOPs Concepts</a>
+  <a href="#Constructor">Constructor</a>
+  <a href="#Destructor">Destructor</a>
+  <a href="#Polymorphism">Polymorphism</a>
+  <a href="#MCQ's">MCQ's</a>
+  <a href="capi.html">Quiz</a>
+  <a href="#Videos">Videos</a>
+</div>
+
+
+<div class="content">
+  <h1>OBJECT ORIENTED PROGRAMMING</h1>
+  <p><font size="4">C++ is a middle-level programming language developed by Bjarne Stroustrup starting in 1979 at Bell Labs. C++ runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX. This tutorial adopts a simple and practical approach to describe the concepts of C++.</font></p>
+  <p><font size="4">Our C++ tutorial includes all topics of C++ such as first example, control statements, objects and classes, inheritance, constructor, destructor, this, static, polymorphism, abstraction, abstract class, interface, namespace, encapsulation, arrays, strings, exception handling, File IO, etc.
+  </font></p>
+
+  <h3> Benefits of C++ over C Language </h3>
+  <p><font size="4">The major difference being OOPS concept, C++ is an object oriented language whereas C language is a procedural language. Apart form this there are many other features of C++ which gives this language an upper hand on C laguage.</font></p>
+</div>
+
+</body>
+</html>

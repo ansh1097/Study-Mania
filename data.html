@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("C++n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="#home">Home</a>
+  <a href="var.html">Variable</a>
+  <a class="active" href="#Datatypes">Datatypes</a>
+  <a href="operator.html">Operators</a>
+  <a href="#If-else">If-else</a>
+  <a href="#For-loop">For-loop</a>
+  <a href="#While loop">While loop</a>
+  <a href="#Do-While loop">Do-While loop</a>
+  <a href="#Break statement">Break statement</a>
+  <!--<a href="#Continue statement">Continue statement</a>-->
+  <a href="#Goto statement">Goto statement</a>
+  <a href="#Comments">Comments</a>
+  <a href="#Functions">Functions</a>
+  <a href="#Call by Value & Reference">Call by Value & Reference</a>
+  <a href="#Recursion">Recursion</a>
+  <a href="#Storage Classes">Storage Classes</a>
+  <a href="#Arrays">Arrays</a>
+  <a href="#Pointers">Pointers</a>
+  <a href="#OOPs Concepts">OOPs Concepts</a>
+  <a href="#Constructor">Constructor</a>
+  <a href="#Destructor">Destructor</a>
+  <a href="#Polymorphism">Polymorphism</a>
+  <a href="#MCQ's">MCQ's</a>
+  <a href="#Quiz">Quiz</a>
+  <a href="#Videos">Videos</a>
+</div>
+
+
+<div class="content">
+ <h1>DATATYPES</h1>
+<p><font size="4">While writing program in any language, you need to use various variables to store various information. Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in memory.</font></p>
+<p><font size="4">You may like to store information of various data types like character, wide character, integer, floating point, double floating point, boolean etc. Based on the data type of a variable, the operating system allocates memory and decides what can be stored in the reserved memory</font></p>
+<p><font size="4">They are used to define type of variables and contents used. Data types define the way you use storage in the programs you write. Data types can be built in or abstract.</font></p>
+
+<h3> Types of Datatypes </h3>
+<p>There are 4 types of data types in C++ language</p>
+<table>
+  <tr>
+    <th>Types</th>
+    <th>Data Types</th>
+  </tr>
+  <tr>
+    <td>Basic Data Type</td>
+    <td>int,char,float,double,etc.</td>
+  </tr>
+  <tr>
+    <td>Derived Data Type</td>
+    <td>array,pointers,etc.</td>
+  </tr>
+  <tr>
+    <td>Enumeration Data Type</td>
+    <td>enum</td>
+  </tr>
+  <tr>
+    <td>User Defined Data Type</td>
+    <td>structure</td>
+  </tr>
+</table>
+
+<h3> Basic Data Types </h3>
+<p><font size="4">The basic data types are integer-based and floating-point based. C++ language supports both signed and unsigned literals.</font></p>
+
+<p><font size="4">The memory size of basic data types may change according to 32 or 64 bit operating system.</font></p>
+
+<p><font size="4">Let's see the basic data types. It size is given according to 32 bit OS.</font></p>
+<table>
+  <tr>
+    <th>Data Types</th>
+    <th>Types</th>
+    <th> Memory Size</th>
+  </tr>
+  <tr>
+    <td>char</td>
+    <td>1 byte</td>
+    <td> -128 to 127</td>
+  </tr>
+  <tr>
+    <td>signed char</td>
+    <td>1 byte</td>
+    <td> -128 to 127</td>
+  </tr>
+  <tr>
+    <td>unsigned char</td>
+    <td>1 byte</td>
+    <td> 0 to 127</td>
+  </tr>
+  <tr>
+    <td>short</td>
+    <td>2 bytes</td>
+    <td>-32,768 to 32,767 </td>
+  </tr>
+   <tr>
+    <td>signed short</td>
+    <td>2 bytes</td>
+    <td>-32,768 to 32,767 </td>
+  </tr>
+   <tr>
+    <td>unsigned short</td>
+    <td>2 bytes</td>
+    <td> 0 to 32,767 </td>
+  </tr>
+   <tr>
+    <td>int</td>
+    <td>2 bytes</td>
+    <td>-32,768 to 32,767 </td>
+  </tr>
+   <tr>
+    <td>signed int</td>
+    <td>2 bytes</td>
+    <td>-32,768 to 32,767 </td>
+  </tr>
+   <tr>
+    <td>unsigned int</td>
+    <td>2 bytes</td>
+    <td> 0 to 32,767 </td>
+  </tr>
+</table>
+
+<h3> Enum as Data type </h3>
+
+<p><font size="4"> Enumerated type declares a new type-name and a sequence of value containing identifiers which has values starting from 0 and incrementing by 1 every time.</font></p>
+
+<p><font size="4"><b>For Example :</b></font></p>
+<p><font size="4">enum day(mon, tues, wed, thurs, fri) d;</font></p>
+
+<p><font size="4">Here an enumeration of days is defined with variable d. mon will hold value 0, tue will have 1 and so on. We can also explicitly assign values, like, enum day(mon, tue=7, wed);. Here, mon will be 0, tue is assigned 7, so wed will have value 8.</font></p>
+
+<h3> Modifiers </h3>
+
+<p><font size="4">Specifiers modify the meanings of the predefined built-in data types and expand them to a much larger set. There are four data type modifiers in C++, they are :</font></p>
+<p><font size="4"> 1. long </font></p>
+<p><font size="4"> 2. short </font></p>
+<p><font size="4"> 3. signed </font></p>
+<p><font size="4"> 4. unsigned </font></p>
+<p><font size-"4">Below mentioned are some important points you must know about the modifiers,</font></p>
+<p><font size="4"> a) <b>long </b> and <b> short </b> modify the maximum and minimum values that a data type will hold.</font></p>
+<p><font size="4"> b) A plain int must have a minimum size of <b> short </b>.</font></p>
+<p><font size="4"> c) Size hierarchy : short int < int < long int</font></p>
+<p><font size="4"> d) Size hierarchy for floating point numbers is : float < double < long double</font></p>
+<p><font size="4"> e) <b> long float </b> is not a legal type and there are no <b>short floating point</b> numbers.</font></p>
+<p><font size="4"> f)<b>Signed</b> types includes both positive and negative numbers and is the default type.</font></p>
+<p><font size="4"> g)<b>Unsigned</b>, numbers are always without any sign, that is always positive.</font></p>
+</div>
+
+</body>
+</html>

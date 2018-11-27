@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("C++n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="C++.html">Home</a>
+  <a href="var.html">Variable</a>
+  <a href="data.html">Datatypes</a>
+  <a href="operator.html">Operators</a>
+  <a href="ifelse.html">If-else</a>
+  <a href="forloop.html">For-loop</a>
+  <a href="whileloop.html">While loop</a>
+  <a href="doWhileloop.html">Do-While loop</a>
+  <a href="break.html">Break statement</a>
+  <!--<a href="#Continue statement">Continue statement</a>-->
+  <a class="active" href="goto.html">Goto statement</a>
+  <a href="comments.html">Comments</a>
+  <a href="#Functions">Functions</a>
+  <a href="#Call by Value & Reference">Call by Value & Reference</a>
+  <a href="#Recursion">Recursion</a>
+  <a href="#Storage Classes">Storage Classes</a>
+  <a href="#Arrays">Arrays</a>
+  <a href="#Pointers">Pointers</a>
+  <a href="#OOPs Concepts">OOPs Concepts</a>
+  <a href="#Constructor">Constructor</a>
+  <a href="#Destructor">Destructor</a>
+  <a href="#Polymorphism">Polymorphism</a>
+  <a href="#MCQ's">MCQ's</a>
+  <a href="#Quiz">Quiz</a>
+  <a href="#Videos">Videos</a>
+</div>
+
+
+<div class="content">
+<h1> GOTO SATEMENT </h1>
+<p><font size="4">The C++ goto statement is also known as jump statement. It is used to transfer control to the other part of the program. It unconditionally jumps to the specified label.</font></p>
+<p><font size="4">It can be used to transfer control from deeply nested loop or switch case label.
+
+<h2> C++ Goto Statement Example </h2>
+<p><font size="4">Let's see a simple example of C++ break statement which is used inside the loop.</font></p>
+<p><font size="4">#include<iostream> </font></p>
+<p><font size="4">using namespace std;</font></p>
+<p><font size="4">int main () {  </font></p>
+<p><font size="4">ineligible:</font></p>
+<p><font size="4">cout<<"You are not eligible to vote!"</font></p>  
+<p><font size="4">cout<<"Enter your age:\n"; </font></p>
+<p><font size="4">int age;</font></p>
+<p><font size="4">cin>>age;</font></p>
+<p><font size="4">if(age<18){</font></p>
+<p><font size="4">goto ineligible;</font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">else</font></p>
+<p><font size="4">{</font></p>
+<p><font size="4">  cout<<"You are eligible to vote!";  </font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">}</font></p>
+</div>
+</body>
+</html>

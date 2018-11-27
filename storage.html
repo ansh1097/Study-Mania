@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("C++n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="C++.html">Home</a>
+  <a href="var.html">Variable</a>
+  <a href="data.html">Datatypes</a>
+  <a href="operator.html">Operators</a>
+  <a href="ifelse.html">If-else</a>
+  <a href="forloop.html">For-loop</a>
+  <a href="whileloop.html">While loop</a>
+  <a href="doWhileloop.html">Do-While loop</a>
+  <a href="break.html">Break statement</a>
+  <!--<a href="#Continue statement">Continue statement</a>-->
+  <a href="goto.html">Goto statement</a>
+  <a href="comments.html">Comments</a>
+  <a href="function.html">Functions</a>
+  <a href="call.html">Call by Value & Reference</a>
+  <a href="recursion.html">Recursion</a>
+  <a class="active" href="storage.html">Storage Classes</a>
+  <a href="arrays.html">Arrays</a>
+  <a href="#Pointers">Pointers</a>
+  <a href="#OOPs Concepts">OOPs Concepts</a>
+  <a href="#Constructor">Constructor</a>
+  <a href="#Destructor">Destructor</a>
+  <a href="#Polymorphism">Polymorphism</a>
+  <a href="#Overloading">Overloading</a>
+  <a href="#Overriding">Overriding</a>
+  <a href="#Enumeration">Enumeration</a>
+  <a href="#try/catch">try/catch</a>
+  <a href="#Exception Handling">Exception Handling</a>
+  <a href="#MCQ's">MCQ's</a>
+  <a href="#Quiz">Quiz</a>
+  <a href="#Videos">Videos</a>
+</div>
+
+
+<div class="content">
+ <h1>C++ STORAGE CLASSES </h1>
+<p><font size="4">A storage class defines the scope (visibility) and life-time of variables and/or functions within a C++ Program. These specifiers precede the type that they modify.Storage class is used to define the lifetime and visibility of a variable and/or function within a C++ program.</font></p>
+<p><font size="4">Lifetime refers to the period during which the variable remains active and visibility refers to the module of a program in which the variable is accessible.</font></p>
+<p><font size="4">Storage classes are used to specify the lifetime and scope of variables. How storage is allocated for variables and How variable is treated by complier depends on these storage classes.</font></p>
+<p><font size="4">These are basically divided into 5 different types :</font></p>
+<p><font size="4">1. auto</font></p>
+<p><font size="4">2. register</font></p>
+<p><font size="4">3. static</font></p>
+<p><font size="4">4. extern</font></p>
+<p><font size="4">5. mutable</font></p>
+
+<table>
+  <tr>
+    <th>Storage Class</th>
+    <th>Keyword</th>
+    <th>Lifetime</th>
+    <th>Visibility</th>
+    <th>Initial Value</th>
+  </tr>
+  <tr>
+    <td>Automatic</td>
+    <td>auto</td>
+    <td>Function Block</td>
+    <td>Local</td>
+    <td>Garbage</td>
+  </tr>
+  <tr>
+    <td>Register</td>
+    <td>register</td>
+    <td>Function Block</td>
+    <td>Local</td>
+    <td>Garbage</td>
+  </tr>
+  <tr>
+    <td>Mutable</td>
+    <td>mutable</td>
+    <td>class</td>
+    <td>Local</td>
+    <td>Garbage</td>
+  </tr>
+  <tr>
+   <td>External</td>
+    <td>extern</td>
+    <td>Whole Program</td>
+    <td>Global</td>
+    <td>Zero</td>
+  </tr>
+   <tr>
+    <td>Static</td>
+    <td>static</td>
+    <td>Whole Program</td>
+    <td>Local</td>
+    <td>Zero</td>
+  </tr>
+</table>
+
+<h2> Automatic Storage Class </h2>
+<p><font size="4">It is the default storage class for all local variables. The auto keyword is applied to all local variables automatically.</font></p>
+<p><font size="4">{</font></p>
+<p><font size="4">auto int y;</font></p>
+<p><font size="4">float y=3.45;</font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">The above example defines two variables with a same storage class, auto can only be used within functions.</font></p>
+
+<h2> Register Storage Class </h2>
+<p><font size="4">The register variable allocates memory in register than RAM. Its size is same of register size. It has a faster access than other variables.</font></p>
+<p><font size="4">It is recommended to use register variable only for quick access such as in counter.</font></p>
+<p><font size="4">Note: We can't get the address of register variable.</font></p> 
+<p><font size="4"><b>register</b>int counter=0;</font></p>
+
+<h2> Static Storage Class </h2>
+<p><font size="4">The static variable is initialized only once and exists till the end of a program. It retains its value between multiple functions call.</font></p>
+<p><font size="4">The static variable has the default value 0 which is provided by compiler.</font></p>
+<p><font size="4">#include<iostream></font></p>
+<p><font size="4">using namespace std; </font></p>
+<p><font size="4">void func(){</font></p>
+<p><font size="4">static int i=0;//static variable</font></p>
+<p><font size="4">int j=0;//local variable</font></p> 
+<p><font size="4">i++;</font></p>
+<p><font size="4">j++;</font></p>
+<p><font size="4">cout<<"i=" << i<<" and j=" <<j<<endl; </font></p>
+<p><font size="4">}</font></p>
+<p><font size="4">int main()</font></p>
+<p><font size="4">{</font></p>
+<p><font size="4">func();</font></p>
+<p><font size="4">func();</font></p>
+<p><font size="4">func();</font></p>
+<p><font size="4">}</font></p>
+
+<h2>Extern Storage Class</h2>
+<p><font size="4">The extern variable is visible to all the programs. It is used if two or more files are sharing same variable or function.</font></p>
+<p><font size="4">extern int counter=0;</font></p>
+</div>
+</body>
+</html>

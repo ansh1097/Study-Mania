@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: url("C++n.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="#home">Home</a>
+  <a href="#Variable">Variable</a>
+  <a href="data.html">Datatypes</a>
+  <a class="active" href="#Operators">Operators</a>
+  <a href="ifelse.html">If-else</a>
+  <a href="#For-loop">For-loop</a>
+  <a href="#While loop">While loop</a>
+  <a href="#Do-While loop">Do-While loop</a>
+  <a href="#Break statement">Break statement</a>
+  <!--<a href="#Continue statement">Continue statement</a>-->
+  <a href="#Goto statement">Goto statement</a>
+  <a href="#Comments">Comments</a>
+  <a href="#Functions">Functions</a>
+  <a href="#Call by Value & Reference">Call by Value & Reference</a>
+  <a href="#Recursion">Recursion</a>
+  <a href="#Storage Classes">Storage Classes</a>
+  <a href="#Arrays">Arrays</a>
+  <a href="#Pointers">Pointers</a>
+  <a href="#OOPs Concepts">OOPs Concepts</a>
+  <a href="#Constructor">Constructor</a>
+  <a href="#Destructor">Destructor</a>
+  <a href="#Polymorphism">Polymorphism</a>
+  <a href="#MCQ's">MCQ's</a>
+  <a href="#Quiz">Quiz</a>
+  <a href="#Videos">Videos</a>
+</div>
+
+
+<div class="content">
+ <h1>OPERATORS</h1>
+<p><font size="4">An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations.An operator is simply a symbol that is used to perform operations. There can be many types of operations like arithmetic, logical, bitwise etc.</font></p>
+<p><font size="4">Operators are special type of functions, that takes one or more arguments and produces a new value. For example : addition (+), substraction (-), multiplication (*) etc, are all operators. Operators are used to perform various operations on variables and constants.</font></p>
+<p><font size="4">C++ is rich in built-in operators and provide the following types of operators −</font></p>
+<p><font size="4"> 1.Arithmetic Operators</font></p> 
+<p><font size="4"> 2.Relational Operators</font></p>
+<p><font size="4"> 3.Logical Operators</font></p>
+<p><font size="4"> 4.Bitwise Operators</font></p>
+<p><font size="4"> 5.Assignment Operator</font></p>
+
+<h2> Arithmetic Operators </h2>
+<p>There are following arithmetic operators supported by C++ language −</p>
+<p>Assume variable A holds 10 and variable B holds 20, then −</p>
+<table>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>+</td>
+    <td>Adds two operands</td>
+    <td>A+B gives 30</td>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>Subtract second operand from the first</td>
+    <td>A-B dives -10</td>
+  </tr>
+  <tr>
+    <td>*</td>
+    <td>Multiplies both operands</td>
+    <td>A*B gives 200</td>
+  </tr>
+  <tr>
+    <td>/</td>
+    <td>Divides numerator by de-numerator</td>
+    <td>B/A gives 2</td>
+  </tr>
+   <tr>
+    <td>%</td>
+    <td>Modulus Operator and remainder of after an integer division</td>
+    <td>B%A dives 0</td>
+  </tr>
+  <tr>
+    <td>++</td>
+    <td>Increment operator, increases integer value by one</td>
+    <td>A++ gives 11</td>
+  </tr>
+  <tr>
+    <td>--</td>
+    <td>Decrement operator, decreases integer value by one</td>
+    <td>A-- gives 9</td>
+</table>
+
+<h2> Relational Operators </h2>
+<p><font size="4">These operators establish a relationship between operands. The relational operators are : less than (<) , grater thatn (>) , less than or equal to (<=), greater than equal to (>=), equivalent (==) and not equivalent (!=).</font></p>
+
+<p><font size="4">You must notice that assignment operator is (=) and there is a relational operator, for equivalent (==). These two are different from each other, the assignment operator assigns the value to any variable, whereas equivalent operator is used to compare values.</font></p>
+
+<p><font size="4">Assume variable A holds 10 and variable B holds 20, then −</font></p>
+<table>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>==</td>
+    <td>Checks if the values of two operands are equal or not, if yes then condition becomes true.</td>
+    <td>(A == B) is not true.</td>
+  </tr>
+  <tr>
+    <td>!=</td>
+    <td>Checks if the values of two operands are equal or not, if values are not equal then condition becomes true</td>
+    <td>(A != B) is true.</td>
+  </tr>
+  <tr>
+    <td>></td>
+    <td>Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.</td>
+    <td>(A > B) is not true.</td>
+  </tr>
+  <tr>
+    <td><</td>
+    <td>Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.</td>
+    <td>(A < B) is true.</td>
+  </tr>
+   <tr>
+    <td>>=</td>
+    <td>Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.</td>
+    <td>(A >= B) is not true.</td>
+  </tr>
+  <tr>
+    <td><=</td>
+    <td>Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.</td>
+    <td>(A <= B) is true.</td>
+</table>
+
+<h2>Logical Operators</h2>
+
+<p><font size="4"> The logical operators are AND (&&) and OR (||). They are used to combine two different expressions together.</font></p>
+
+<p><font size="4">If two statement are connected using AND operator, the validity of both statements will be considered, but if they are connected using OR operator, then either one of them must be valid. These operators are mostly used in loops (especially while loop) and in Decision making.
+</font></p>
+<p><font size="4">Assume variable A holds 1 and variable B holds 0, then,</font></p>
+
+<table>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>&&</td>
+    <td>Called Logical AND operator. If both the operands are non-zero, then condition becomes true.</td>
+    <td>(A && B) is true.</td>
+  </tr>
+  <tr>
+    <td>||</td>
+    <td>Called Logical OR Operator. If any of the two operands is non-zero, then condition becomes true.</td>
+    <td>(A || B) is false.</td>
+  </tr>
+  <tr>
+    <td>!</td>
+    <td>Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then Logical NOT operator will make false.</td>
+    <td>!(A && B) is true.</td>
+  </tr>
+</table>
+
+<h2> Bitwise Operators </h2>
+
+<p><font size="4">There are used to change individual bits into a number. They work with only integral data types like char, int and long and not with floating point values.</font></p>
+<p><font size="4"> 1. Bitwise AND operators '&' </font></p>
+<p><font size="4"> 2. Bitwise OR operator '|' </font></p>
+<p><font size="4"> 3. And bitwise XOR operator '^' </font></p>
+<p><font size="4"> 4. And, bitwise NOT operator '~' </font></p>
+<p><font size-"4">They can be used as shorthand notation too, & = , |= , ^= , ~= etc.</font></p>
+
+<table>
+  <tr>
+    <th>p</th>
+    <th>q</th>
+    <th>p&q</th>
+    <th>p|q</th>
+    <th>p^q</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+</table>
+
+<h2> Assignment Operators </h2>
+<p><font size="4">Operates '=' is used for assignment, it takes the right-hand side (called rvalue) and copy it into the left-hand side (called lvalue). Assignment operator is the only operator which can be overloaded but cannot be inherited.</font></p>
+<p><font size="4">There are following assignment operators supported by C++ language −</font></p>
+
+<table>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>=</td>
+    <td>Simple assignment operator, Assigns values from right side operands to left side operand.</td>
+    <td>C = A + B will assign value of A + B into C</td>
+  </tr>
+  <tr>
+    <td>+=</td>
+    <td>Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand.</td>
+    <td>C += A is equivalent to C = C + A</td>
+  </tr>
+  <tr>
+    <td>-=</td>
+    <td>Subtract AND assignment operator, It subtracts right operand from the left operand and assign the result to left operand.</td>
+    <td>C -= A is equivalent to C = C - A</td>
+  </tr>
+  <tr>
+    <td>*=</td>
+    <td>Multiply AND assignment operator, It multiplies right operand with the left operand and assign the result to left operand.</td>
+    <td>C *= A is equivalent to C = C * A</td>
+  </tr>
+  <tr>
+    <td>/=</td>
+    <td>Divide AND assignment operator, It divides left operand with the right operand and assign the result to left operand.</td>
+    <td>C /= A is equivalent to C = C / A</td>
+  </tr>
+  <tr>
+    <td>%=</td>
+    <td>Modulus AND assignment operator, It takes modulus using two operands and assign the result to left operand.</td>
+    <td>C %= A is equivalent to C = C % A</td>
+  </tr>
+  <tr>
+    <td><<=</td>
+    <td>Left shift AND assignment operator.</td>
+    <td>C <<= 2 is same as C = C << 2</td>
+  </tr>
+  <tr>
+    <td>>>=</td>
+    <td>Right shift AND assignment operator.</td>
+    <td>C >>= 2 is same as C = C >> 2</td>
+  </tr>
+    <tr>
+    <td>&=</td>
+    <td>Bitwise AND assignment operator.</td>
+    <td>  C &= 2 is same as C = C & 2</td>
+  </tr>
+  <tr>
+    <td>^=</td>
+    <td>Bitwise exclusive OR and assignment operator.</td>
+    <td>  C ^= 2 is same as C = C ^ 2</td>
+  </tr>
+  <tr>
+    <td>|=</td>
+    <td>Bitwise inclusive OR and assignment operator.</td>
+    <td>C |= 2 is same as C = C | 2</td>
+  </tr>
+</table>
+</div>
+
+</body>
+</html>

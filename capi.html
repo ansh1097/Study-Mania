@@ -1,0 +1,914 @@
+<!DOCTYPE >
+<html lang="en">
+
+<head>
+  <style>
+
+  /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+  background-image: url("pih.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+body {
+  /*text-align: center;*/
+  background-size: cover;
+  color: white;
+  background-image: url('pih.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+
+h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  margin-bottom: 1px;
+}
+
+h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: auto;
+  margin-bottom: 45px;
+  letter-spacing: 6.5px;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  padding: 5px;
+  width: 64%;
+  line-height: -10px;
+}
+
+
+#question-container {
+padding: 10px 5px;
+text-align: center;
+margin: auto;
+margin-top: 40px;
+margin-bottom: 40px;
+max-width: 800px;
+background: rgba(0,0,0,0.7); 
+box-shadow: 1px 1px 1px rgba(0,0,0, 0.7);
+border-radius: 10px;    
+}
+
+.form-style{
+    max-width: 650px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    padding: 20px;
+
+}
+.form-style fieldset{
+    border: none;
+}
+.form-style legend {
+    font-size: 1.7em;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+}
+.text-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.fieldgroup {
+  display: inline-block;
+  padding-right: 30px;
+  margin-bottom: 8px;
+}
+
+.radio {
+  text-align: left;
+  padding: 0;
+  margin-top: -5px;
+  margin-bottom: 30px;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+.form-style input[type="text"],
+.form-style input[type="number"],
+.form-style textarea,
+.form-style select {
+    font-family: 'Quicksand', sans-serif;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 98%; 
+    background-color: #d2d9dd;
+    color:#0d243e;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    border: 3px solid #d2d9dd;
+}
+
+
+
+.form-style input[type="text"]:focus,
+.form-style input[type="number"]:focus,
+.form-style textarea:focus,
+.form-style select:focus{
+    background: #e8eeef;
+    border: 3px solid #5081E4;
+}
+.form-style select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.form-style .number {
+    background: #5081E4;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 27px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.form-style button[type="button"]
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px 100px 10px 100px;
+    color: #FFF;
+    margin: 5 auto;
+    background: #5081E4;
+    font-size: 2rem;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #5081E4;
+    font-family: 'Quicksand', sans-serif;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+
+#result {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8rem;
+}
+
+#answers {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.7rem;
+}
+</style>
+
+
+<script type="text/javascript">
+//Function to count correct answers and print results to document 
+function myFunction() {
+
+
+document.getElementById("result").innerHTML="hows that";
+    //Create variable to count correct answers 
+    var correctAnswers = 0;
+
+    //Create variables for each question's input value
+    var q1 = document.getElementById("q1c").checked;
+   var q2 = document.getElementById("q2b").checked;
+   var q3 = document.getElementById("q3c").checked;
+   var q4 = document.getElementById("q4b").checked;
+   var q5 = document.getElementById("q5a").checked;
+   var q6 = document.getElementById("q6d").checked;
+    var q7 = document.getElementById("q7b").checked;
+     var q8 = document.getElementById("q8a").checked;
+     var q9 = document.getElementById("q9d").checked;
+     var q10 = document.getElementById("q10c").checked;
+
+    //Assign correct answers to field inputs
+      
+     if (q1) {
+        correctAnswers += 1;
+    }
+   else
+    {
+      correctAnswers=0;
+    }
+  
+ if (q2) {
+        correctAnswers += 1;
+    } 
+
+     if (q3) {
+        correctAnswers += 1;
+    
+    }
+
+     if (q4) {
+        correctAnswers += 1;
+   
+}
+ if (q5) {
+        correctAnswers += 1;
+   
+}
+
+ if (q6) {
+        correctAnswers += 1;
+   
+}  
+
+if (q7) {
+        correctAnswers += 1;
+   
+} 
+
+if (q8) {
+        correctAnswers += 1;
+   
+}
+
+if (q9) {
+        correctAnswers += 1;
+   
+}
+
+if (q10) {
+        correctAnswers += 1;
+   
+}
+     
+    
+
+
+         //Print results (and statement) to document, dependant on outcome
+         if (correctAnswers === 10) {
+        document.getElementById("result").innerHTML = "Congratulations! You got all 10 answers correct";}
+    else if (correctAnswers >= 8) {
+        document.getElementById("result").innerHTML = "Congratulations! You got " + correctAnswers + " answers correct";}
+    else if (correctAnswers >= 5) {
+        document.getElementById("result").innerHTML = "You got " + correctAnswers + " answers correct";}
+    else if (correctAnswers >= 1) {
+        document.getElementById("result").innerHTML = "Too Bad! You only got " + correctAnswers + " answers correct";}
+    else{
+      document.getElementById("result").innerHTML="very bad ! you got  "+correctAnswers+" answers";
+    }
+        //Print correct answers to form
+        document.getElementById("answers").innerHTML = "Correct answers: (1)Trap (2)real (3)Operator-&& (4)B is member of Object A (5)A Semicolon (;)(6)calloc() (7)Null Pointer (8)One Argument (9)Absurd Class (10)Numero Uno Class";
+
+        //Reset contents of form
+        document.getElementById("quiz-form").reset();
+}
+
+
+
+
+</script>
+
+</head>
+
+<body>
+  <div id="question-container">  
+    <div class="form-style">
+      <h2>Test your Knowledge</h2>
+
+      <form id="quiz-form">
+        <fieldset>
+
+                <!--QUESTION TWO !-->
+                 <div class = radio>
+                  <p>1) Delaration a pointer more than once may cause ____</p>
+                    <ul class="radio">
+                        <div class="fieldgroup">
+                        <input type="radio" name="q1" value="y" id="q1a" class="radio-label"><label for="q1a">Error</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q1" value="x" id="q1b" class="radio-label"><label for="q1b">abort</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q1" value="y" id="q1c" class="radio-label"><label for="q1c">trap</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q1" value="y" id="q1d" class="radio-label"><label for="q1d">null</label><br/> 
+                      </div>
+                      
+                    </ul>
+                </div>
+
+
+
+ 
+ <div class = radio>
+                <p>2)Which one is not a correct variable type in C++?</p>
+                  <ul class="radio">
+                    <div class="fieldgroup">
+                      <input type="radio" name="q2" value="x" id="q2a" class="radio-label"><label for="q1a">float</label><br/>
+                    </div>
+                    <div class="fieldgroup">
+                      <input type="radio" name="q2" value="x" id="q2b" class="radio-label"><label for="q2b">real</label><br/>
+                    </div>
+                    <div class="fieldgroup">
+                      <input type="radio" name="q2" value="x" id="q2c" class="radio-label"><label for="q2c">double</label><br/>
+                    </div>
+                    <div class="fieldgroup">
+                      <input type="radio" name="q2" value="x" id="q2d" class="radio-label"><label for="q2d">int</label><br/>
+                    </div>
+                  </ul>
+                </div>
+  
+<div class = radio>
+                <p>3)Which operation is used as Logical 'AND'</p>
+                  <ul class="radio">
+                    <div class="fieldgroup">
+                      <input type="radio" name="q3" value="x" id="q3a" class="radio-label"><label for="q3a">Operator-&</label><br/>
+                    </div>
+                    <div class="fieldgroup">
+                      <input type="radio" name="q3" value="y" id="q3b" class="radio-label"><label for="q3b">Operator-||</label><br/>
+                    </div>
+                    <div class="fieldgroup">
+                      <input type="radio" name="q3" value="y" id="q3c" class="radio-label"><label for="q3c">Operator-&&</label><br/>
+                    </div>
+                    <div class="fieldgroup">
+                      <input type="radio" name="q3" value="y" id="q3d" class="radio-label"><label for="q3d">Operator +
+</label><br/>
+                    </div>
+                  </ul>
+                </div>
+
+ <!--QUESTION TEN !-->
+                <div class = radio>
+                  <p>4)An expression A.B in C++ means ____</p>
+                    <ul class="radio">
+                      <div class="fieldgroup">
+                        <input type="radio" name="q4" value="x" id="q4a" class="radio-label"><label for="q4a">A is member of object B</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q4" value="y" id="q4b" class="radio-label"><label for="q4b">B is member of Object A</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q4" value="y" id="q4c" class="radio-label"><label for="q4c">Product of A and B</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q4" value="y" id="q4d" class="radio-label"><label for="q4d">None of these</label><br/>
+                      </div>
+                    </ul>
+                </div>
+
+ <!--QUESTION ELEVEN !-->
+                <div class = radio>
+                  <p>5)A C++ code line ends with ___</p>
+                    <ul class="radio">
+                      <div class="fieldgroup">
+                        <input type="radio" name="q5" value="x" id="q5a" class="radio-label"><label for="q5a">A Semicolon (;)</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q5" value="y" id="q5b" class="radio-label"><label for="q5b">A Fullstop(.)</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q5" value="y" id="q5c" class="radio-label"><label for="q5c">A Comma (,)</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q5" value="y" id="q5d" class="radio-label"><label for="q5d">A Slash (/)</label><br/>
+                      </div>
+                    </ul>
+                </div>
+
+ <!--QUESTION THIRTEEN !-->
+                <div class = radio>
+                  <p>6) ______ function is used to allocate space for array in memory.</p>
+                    <ul class="radio">
+                      <div class="fieldgroup">
+                        <input type="radio" name="q6" value="x" id="q6a" class="radio-label"><label for="q6a">malloc()</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q6" value="y" id="q6b" class="radio-label"><label for="q6b">realloc()</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q6" value="y" id="q6c" class="radio-label"><label for="q6c">alloc()</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q6" value="y" id="q6d" class="radio-label"><label for="q6d">calloc()</label><br/>
+                      </div>
+                    </ul>
+                </div>
+
+ <!--QUESTION FIFTEEN !-->
+                <div class = radio>
+                  <p>7)A ponter pointing to a variable that is not initialized is called ____</p>
+                    <ul class="radio">
+                      <div class="fieldgroup">
+                        <input type="radio" name="q7" value="x" id="q7a" class="radio-label"><label for="q7a">Void Pointer</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q7" value="y" id="q7b" class="radio-label"><label for="q7b">Null Pointer</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q7" value="y" id="q7c" class="radio-label"><label for="q7c">Empty Pointer</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q7" value="y" id="q7d" class="radio-label"><label for="q7d">Wild Pointer</label><br/>
+                      </div>
+                    </ul>
+                </div>             
+
+<!--QUESTION SIXTEEN !-->
+                <div class = radio>
+                  <p>8) Default constructor has ____ arguments.</p>
+                    <ul class="radio">
+                      <div class="fieldgroup">
+                        <input type="radio" name="q8" value="x" id="q8a" class="radio-label"><label for="q8a">No argument</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q8" value="y" id="q8b" class="radio-label"><label for="q8b">One Argument</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q8" value="y" id="q8c" class="radio-label"><label for="q8c">Two Argument</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q8" value="y" id="q8d" class="radio-label"><label for="q8d">None of these</label><br/>
+                      </div>
+                    </ul>
+                </div>
+
+  <!--QUESTION EIGHTEEN !-->
+                <div class = radio>
+                  <p>9)A class whos objects can not be created is known as _____</p>
+                    <ul class="radio">
+                      <div class="fieldgroup">
+                        <input type="radio" name="q9" value="x" id="q9a" class="radio-label"><label for="q9a">Absurd Class</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q9" value="y" id="q9b" class="radio-label"><label for="q9b">Dead Class</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q9" value="y" id="q9c" class="radio-label"><label for="q9c">Super Class</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q9" value="y" id="q9d" class="radio-label"><label for="q9d">Abstract Class</label><br/>
+                      </div>
+                    </ul>
+                </div>  
+
+ <div class = radio>
+                  <p>10)Which class allows only one object to be created.</p>
+                    <ul class="radio">
+                      <div class="fieldgroup">
+                        <input type="radio" name="q10" value="x" id="q10a" class="radio-label"><label for="q10a">Nuclear Family Class</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q10" value="y" id="q10b" class="radio-label"><label for="q10b">Abstruct Class</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q10" value="y" id="q10c" class="radio-label"><label for="q10c">Sigleton Class</label><br/>
+                      </div>
+                      <div class="fieldgroup">
+                        <input type="radio" name="q10" value="y" id="q10d" class="radio-label"><label for="q10d">Numero Uno Class</label><br/>
+                      </div>
+                    </ul>
+                </div>  
+
+
+       <button type="button" onclick="myFunction()">Submit</button>
+
+       <p id="result"></p>
+       <p id="answers"></p>
+
+      </form>
+    </div>
+   <script src="script.js"></script>
+ </fieldset>
+</form>
+</div>
+                
+
+    
+</body>
+</html>
